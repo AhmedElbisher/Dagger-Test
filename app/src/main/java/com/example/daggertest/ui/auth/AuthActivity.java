@@ -91,7 +91,6 @@ public class AuthActivity extends DaggerAppCompatActivity implements View.OnClic
     public void navToMainActivity(){
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
-
     }
 
     private void attemAuth() {

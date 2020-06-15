@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigationgraph"
+    app:startDestination="@id/profileFragment"
+    tools:ignore="UnusedNavigation">
+
+    <fragment
+        android:id="@+id/postsFragment"
+        android:name="com.example.daggertest.main.posts.PostsFragment"
+        android:label="PostsFragment"
+        tools:layout="@layout/fragment_blank"
+        />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.daggertest.main.profile.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile"/>
+</navigation>
