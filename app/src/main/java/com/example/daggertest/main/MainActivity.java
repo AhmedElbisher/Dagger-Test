@@ -6,16 +6,10 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.Toast;
-
 import androidx.annotation.NonNull;
-
 import com.example.daggertest.BaseActivity;
 import com.example.daggertest.R;
 import com.example.daggertest.main.posts.PostsFragment;
-import com.example.daggertest.main.profile.ProfileFragment;
-
-import java.util.zip.Inflater;
 
 public class MainActivity extends BaseActivity {
     private static final String TAG = "MainActivity";
