@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 
 import com.example.daggertest.BaseActivity;
 import com.example.daggertest.R;
+import com.example.daggertest.main.posts.PostsFragment;
 import com.example.daggertest.main.profile.ProfileFragment;
 
 import java.util.zip.Inflater;
@@ -22,9 +23,8 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toast.makeText(this, "thhis is" + TAG, Toast.LENGTH_SHORT).show();
         getSupportFragmentManager().beginTransaction()
-                .replace(R.id.container,new ProfileFragment())
+                .replace(R.id.container,new PostsFragment())
                 .commit();
     }
 

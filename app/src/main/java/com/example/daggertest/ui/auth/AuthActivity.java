@@ -28,7 +28,6 @@ import dagger.android.support.DaggerAppCompatActivity;
 
 
 public class AuthActivity extends DaggerAppCompatActivity implements View.OnClickListener {
-
     EditText userInId;
     ProgressBar progressBar;
     Button loginButton;
