@@ -9,6 +9,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelProviders;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.util.Log;
@@ -40,6 +41,11 @@ public class PostsFragment extends DaggerFragment {
     PostsViewModel viewModel;
     @Inject
     ViewModelProviderFactory factory;
+    @Inject
+    LinearLayoutManager linearLayoutManager;
+    @Inject
+    PostRecyclerAdapter postRecyclerAdapter;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -54,7 +60,13 @@ public class PostsFragment extends DaggerFragment {
         recyclerView = view.findViewById(R.id.recycler_view);
         viewModel = ViewModelProviders.of(this,factory).get(PostsViewModel.class);
         Toast.makeText(getContext(), "Posts fragment", Toast.LENGTH_SHORT).show();
+        initRecyclerAdaptr();
         observeUserID();
+    }
+
+    public  void  initRecyclerAdaptr(){
+        recyclerView.setLayoutManager(linearLayoutManager);
+        recyclerView.setAdapter(postRecyclerAdapter);
     }
 
     public void observeUserID(){
@@ -84,9 +96,10 @@ public class PostsFragment extends DaggerFragment {
                             break;
                         case SUCCESS:
                             Log.i("TAG", listResource.data.toString());
+                            postRecyclerAdapter.setPosts(listResource.data);
                             break;
                         case LOADING:
-                            Log.i("TAG", "Lodding ");
+                            Log.i("TAG", "Looding ");
                             break;
                     }
                 }
