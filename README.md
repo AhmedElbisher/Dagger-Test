@@ -1,5 +1,5 @@
 # Dagger-Practice
->A simple Android app displays authenticated user posts from  JSONPlaceholder API just for practice Dagger2 and some other technologies
+>A simple Android app displays authenticated user posts from  JSONPlaceholder API just for practicing Dagger2 and some other technologies
 
 ## Technologies
 * Dagger2
